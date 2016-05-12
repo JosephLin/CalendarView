@@ -18,15 +18,15 @@ class MainViewController: UITableViewController {
     // MARK: - Segues
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == "showDetail" {
-//            if let indexPath = self.tableView.indexPathForSelectedRow {
-//                let object = objects[indexPath.row] as! NSDate
-//                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! CalendarViewController
-//                controller.detailItem = object
-//                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-//                controller.navigationItem.leftItemsSupplementBackButton = true
-//            }
-//        }
+        
+        let controller = segue.destinationViewController as! CalendarViewController
+
+        if segue.identifier == "ShowWeek" {
+            controller.mode = .Week
+        }
+        else if segue.identifier == "ShowDay" {
+            controller.mode = .Day
+        }
     }
 }
 

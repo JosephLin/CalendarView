@@ -49,7 +49,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="1lS-fr-N2Q" kind="show" id="tOW-nu-B8S"/>
+                                            <segue destination="1lS-fr-N2Q" kind="show" identifier="ShowWeek" id="tOW-nu-B8S"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="AOW-m0-6n1" style="IBUITableViewCellStyleDefault" id="lWU-We-Nva">
@@ -70,7 +70,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="1lS-fr-N2Q" kind="show" id="iNy-L0-AQ7"/>
+                                            <segue destination="1lS-fr-N2Q" kind="show" identifier="ShowDay" id="iNy-L0-AQ7"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -112,6 +112,9 @@
                             <constraint firstItem="hW3-Ap-XAU" firstAttribute="top" secondItem="hQ5-SX-yjl" secondAttribute="top" id="oiN-ZD-i4W"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gridView" destination="hW3-Ap-XAU" id="zI7-Kb-N1l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pHM-ki-hxw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,6 +122,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tOW-nu-B8S"/>
+        <segue reference="iNy-L0-AQ7"/>
     </inferredMetricsTieBreakers>
 </document>

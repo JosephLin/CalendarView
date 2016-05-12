@@ -220,14 +220,19 @@ class GridView: UICollectionView, UICollectionViewDataSource {
         }
     }
     
+    var layout: GridLayout {
+        get {
+            return self.collectionViewLayout as! GridLayout
+        }
+        set {
+            self.collectionViewLayout = newValue
+        }
+    }
+    
     //MARK:- Init
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        let gridLayout = GridLayout()
-        gridLayout.edgeInsets = UIEdgeInsets(top: 40, left: 60, bottom: 20, right: 20)
-        self.collectionViewLayout = gridLayout
         
         self.dataSource = self
         
@@ -247,6 +252,7 @@ class GridView: UICollectionView, UICollectionViewDataSource {
                            forSupplementaryViewOfKind: ElementKind.RowLabel.rawValue,
                            withReuseIdentifier: ElementKind.RowLabel.rawValue)
         
+        self.layout = GridLayout()
         
         // closure invokes didSet
         ({ self.columnLabels  = ["SUN", nil, "TUE"] })()
